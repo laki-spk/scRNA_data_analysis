@@ -1,0 +1,12 @@
+# From the output file of differential gene analyis; filter out the genes that are significant; where p_val_adjecent is less than or equal to 0.01
+# use Metascape for this Link >> https://metascape.org/gp/index.html#/main/step1
+# in the output file of differntial gene analysis; we can sort out avg_log2FC from smallets to large also with p_val less than or equal to 0.01
+# paste that genelist of negative avg_log2FC <0.05 in metascape
+# Then hit submit
+# Choose the species; Record the number of genes; (you may need to include them in the final results output; also when the genes of most abandance cluster is less than 100, you may adjust the avg_log2FC value, Couple hundreds is fine but over thousands is not fine)
+# then do express analysis and this might take a while; output files of this will give a excel file and a pptx file. save them. 
+# negative avg_log2FC mean these genes are down regulated
+# Do this for the positive avg_log2FC as well. these will tell the ones that are up regulated
+
+# at the same time we can calculate percentages of genes available in each number of cluster splitted by orig.ident (whih is control or treatment)
+Genes_expressed <- table(MHM.markers@metadata$Cluster_ID, MHM.markers@metadata$orig.idnt)
