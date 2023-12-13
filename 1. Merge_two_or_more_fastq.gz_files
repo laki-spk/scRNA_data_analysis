@@ -1,0 +1,2 @@
+#Log in to the cluster, LINUX environment, and log in to the node
+cat file1.gz file2.gz file3.gz > allfiles.gz
